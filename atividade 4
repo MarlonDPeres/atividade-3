@@ -1,0 +1,74 @@
+# Calculadora Básica
+
+print("=== Calculadora Básica ===")
+num1 = float(input("Digite o primeiro número: "))
+operador = input("Digite a operação (+, -, *, /): ")
+num2 = float(input("Digite o segundo número: "))
+
+if operador == "+":
+    resultado = num1 + num2
+elif operador == "-":
+    resultado = num1 - num2
+elif operador == "*":
+    resultado = num1 * num2
+elif operador == "/":
+    if num2 != 0:
+        resultado = num1 / num2
+    else:
+        resultado = "Erro! Divisão por zero."
+else:
+    resultado = "Operador inválido!"
+
+print("Resultado:", resultado)
+
+
+
+# Registro de Notas e Média da Turma
+
+print("=== Registro de Notas ===")
+qtd_alunos = int(input("Digite a quantidade de alunos: "))
+
+notas = []
+for i in range(qtd_alunos):
+    nota = float(input(f"Digite a nota do aluno {i+1}: "))
+    notas.append(nota)
+
+media_turma = sum(notas) / len(notas)
+
+print("\nNotas dos alunos:", notas)
+print(f"Média da turma: {media_turma:.2f}")
+
+# Verificação de Senha
+
+print("=== Verificador de Senha ===")
+senha = input("Digite uma senha: ")
+
+tem_numero = any(char.isdigit() for char in senha)
+
+if len(senha) >= 8 and tem_numero:
+    print("Senha válida ✅")
+else:
+    print("Senha inválida ❌")
+    print("Critérios: mínimo de 8 caracteres e pelo menos 1 número.")
+    
+    # Classificação de Números Pares e Ímpares
+
+print("=== Classificador de Números ===")
+qtd = int(input("Quantos números você deseja digitar? "))
+
+pares = 0
+impares = 0
+
+for i in range(qtd):
+    num = int(input(f"Digite o número {i+1}: "))
+    if num % 2 == 0:
+        pares += 1
+        print(f"{num} é par.")
+    else:
+        impares += 1
+        print(f"{num} é ímpar.")
+
+print("\nResumo:")
+print(f"Quantidade de números pares: {pares}")
+print(f"Quantidade de números ímpares: {impares}")
+

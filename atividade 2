@@ -1,0 +1,50 @@
+# Conversor de Moeda
+valor_reais = 100.00
+taxa_dolar = 5.20
+taxa_euro = 6.15
+
+valor_dolar = valor_reais / taxa_dolar
+valor_euro = valor_reais / taxa_euro
+
+print("=== Conversor de Moeda ===")
+print(f"Valor em reais: R$ {valor_reais:.2f}")
+print(f"Em dólares: US$ {valor_dolar:.2f}")
+print(f"Em euros: € {valor_euro:.2f}")
+
+
+# Calculadora de Desconto
+produto = "Camiseta"
+preco_original = 50.00
+desconto_percentual = 20
+
+valor_desconto = preco_original * (desconto_percentual / 100)
+preco_final = preco_original - valor_desconto
+
+print("=== Calculadora de Desconto ===")
+print(f"Produto: {produto}")
+print(f"Preço original: R$ {preco_original:.2f}")
+print(f"Desconto: {desconto_percentual}%")
+print(f"Valor do desconto: R$ {valor_desconto:.2f}")
+print(f"Preço final: R$ {preco_final:.2f}")
+
+# Calculadora de Média Escolar
+nota1 = 7.5
+nota2 = 8.0
+nota3 = 6.5
+
+media = (nota1 + nota2 + nota3) / 3
+
+print("=== Calculadora de Média Escolar ===")
+print(f"Notas: {nota1}, {nota2}, {nota3}")
+print(f"Média final: {media:.2f}")
+
+# Calculadora de Consumo de Combustível
+distancia = 300  # km
+combustivel = 25  # litros
+
+consumo_medio = distancia / combustivel
+
+print("=== Calculadora de Consumo de Combustível ===")
+print(f"Distância percorrida: {distancia} km")
+print(f"Combustível gasto: {combustivel} litros")
+print(f"Consumo médio: {consumo_medio:.2f} km/l")

@@ -1,13 +1,50 @@
-idade = int(input("Informe sua idade: "))
+AWS ElasticBeanStalk
+ serviço que simplifica a gestão da infraestrutura, balanceamento de carga, monitoramento e implantação de aplicações.
 
-if idade < 0:
-    print("Idade inválida.")
-elif idade <= 12:
-    print("Classificação: Criança")
-elif idade <= 17:
-    print("Classificação: Adolescente")
-elif idade <= 59:
-    print("Classificação: Adulto")
-else:
-    print("Classificação: Idoso")
-    
+AWS SDKs
+O AWS SDK (Software Development Kit) é a ferramenta que permite aos desenvolvedores acessar os serviços da AWS diretamente de seu código de aplicação.
+
+Reserved
+Nestes cenários com previsão de tempo de uso e processamento, o uso de instâncias reservadas gera uma economia de até 72% em comparação ao modelo sob demanda (on demand) para períodos de 1 a 3 anos.
+
+Criar snapshots dos volumes EBS e replicá-los em outras regiões
+
+Para garantir a segurança e a durabilidade dos dados, os clientes devem criar snapshots dos volumes EBS e, frequentemente, replicá-los para outras regiões. Snapshots são backups incrementais que capturam o estado dos dados em um volume EBS e podem ser usados para restaurar volumes em caso de falha ou perda de dados.
+
+Amazon Lex
+
+O Amazon Lex facilita a criação rápida de chatbots com IA para integração com o Facebook Messenger.
+
+On-Demand
+
+Dado que o período de piloto é de apenas dois meses e a quantidade de usuários e instâncias de máquinas necessárias ainda é incerta, o plano On-Demand é o mais apropriado. Este modelo permite pagar apenas pelos recursos efetivamente utilizados, oferecendo flexibilidade e escalabilidade sem compromissos de longo prazo.
+
+Amazon RedShift
+
+O Amazon Redshift é ideal para executar consultas complexas e análises em grandes volumes de dados. O serviço de armazenamento de dados da Amazon utilizado para Business Intelligence, permitindo a análise de dados estruturados e semi-estruturados para gerar insights.
+
+
+AWS Snowball
+
+
+O AWS Snow oferece uma variedade de produtos para permitir que a empresa realize a migração de grandes quantidades de dados em dispositivos físicos, projetados para transferências de dados seguras e eficientes em cenários onde a conectividade de rede é instável ou insuficiente.
+
+
+
+AWS Inspector
+
+verifica vulnerabilidades em apps
+
+
+Device Farm 
+ testes em paralelo em vários dispositivos.
+
+Enterprise -  apnenas ele oferece o gerente de contas técnico. e  tempo de resposta inferior a 15 minutos para sistemas críticos e essenciais aos negócios inativos.
+
+Amazon Simple Email Service (SES)
+O Amazon Simple Email Service (SES) é o serviço ideal para ser integrado a um aplicativo que precisa enviar e-mails diariamente. Ele oferece uma plataforma escalável e econômica para envio de e-mails em massa, com alta entrega e flexibilidade para personalização.
+
+
+
+
+

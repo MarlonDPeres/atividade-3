@@ -1,0 +1,80 @@
+pip install requests
+
+import random
+import string
+
+print("=== Gerador de Senha Aleatória ===")
+tamanho = int(input("Digite a quantidade de caracteres da senha: "))
+
+caracteres = string.ascii_letters + string.digits + string.punctuation
+senha = "".join(random.choice(caracteres) for _ in range(tamanho))
+
+print(f"Senha gerada: {senha}")
+
+import requests
+
+print("=== Gerador de Perfil Aleatório ===")
+url = "https://randomuser.me/api/"
+
+resposta = requests.get(url)
+if resposta.status_code == 200:
+    dados = resposta.json()
+    usuario = dados["results"][0]
+    nome = f"{usuario['name']['first']} {usuario['name']['last']}"
+    email = usuario["email"]
+    pais = usuario["location"]["country"]
+
+    print(f"Nome: {nome}")
+    print(f"Email: {email}")
+    print(f"País: {pais}")
+else:
+    print("Erro ao consultar a API!")
+
+import requests
+
+print("=== Consulta de Endereço (ViaCEP) ===")
+cep = input("Digite o CEP (somente números): ")
+
+url = f"https://viacep.com.br/ws/{cep}/json/"
+
+resposta = requests.get(url)
+if resposta.status_code == 200:
+    dados = resposta.json()
+    if "erro" not in dados:
+        print(f"Logradouro: {dados['logradouro']}")
+        print(f"Bairro: {dados['bairro']}")
+        print(f"Cidade: {dados['localidade']}")
+        print(f"Estado: {dados['uf']}")
+    else:
+        print("CEP não encontrado!")
+else:
+    print("Erro ao consultar a API!")
+
+import requests
+
+print("=== Cotação de Moeda (AwesomeAPI) ===")
+moeda = input("Digite o código da moeda (ex: USD, EUR, GBP): ").upper()
+
+url = f"https://economia.awesomeapi.com.br/json/last/{moeda}-BRL"
+
+resposta = requests.get(url)
+if resposta.status_code == 200:
+    dados = resposta.json()
+    chave = f"{moeda}BRL"
+    if chave in dados:
+        info = dados[chave]
+        print(f"Moeda: {info['code']} -> {info['codein']}")
+        print(f"Valor atual: R$ {info['bid']}")
+        print(f"Máximo do dia: R$ {info['high']}")
+        print(f"Mínimo do dia: R$ {info['low']}")
+        print(f"Última atualização: {info['create_date']}")
+    else:
+        print("Moeda inválida ou não encontrada.")
+else:
+    print("Erro ao consultar a API!")
+
+pip install requests
+
+pip install requests
+
+

@@ -1,0 +1,50 @@
+# Função para calcular gorjeta
+
+def calcular_gorjeta(valor_conta: float, porcentagem_gorjeta: float) -> float:
+    gorjeta = valor_conta * (porcentagem_gorjeta / 100)
+    return round(gorjeta, 2)
+
+# Exemplo de uso
+valor = float(input("Digite o valor da conta: R$ "))
+porcentagem = float(input("Digite a porcentagem da gorjeta: "))
+print(f"Gorjeta: R$ {calcular_gorjeta(valor, porcentagem):.2f}")
+
+# Função para verificar se é palíndromo
+
+def eh_palindromo(texto: str) -> bool:
+    texto_filtrado = "".join(c.lower() for c in texto if c.isalnum())  # remove espaços e pontuação
+    return texto_filtrado == texto_filtrado[::-1]
+
+# Exemplo de uso
+frase = input("Digite uma palavra ou frase: ")
+if eh_palindromo(frase):
+    print("Sim")
+else:
+    print("Não")
+
+    # Programa para calcular preço final com desconto
+
+preco = float(input("Digite o preço original do produto: R$ "))
+desconto = float(input("Digite a porcentagem de desconto (%): "))
+
+valor_desconto = preco * (desconto / 100)
+preco_final = preco - valor_desconto
+
+print(f"Valor do desconto: R$ {valor_desconto:.2f}")
+print(f"Preço final com desconto: R$ {preco_final:.2f}")
+
+# Programa para calcular quantos dias um indivíduo está vivo
+
+from datetime import datetime
+
+# Pede data de nascimento
+data_nascimento_str = input("Digite sua data de nascimento (dd/mm/aaaa): ")
+data_nascimento = datetime.strptime(data_nascimento_str, "%d/%m/%Y")
+
+# Data atual
+hoje = datetime.today()
+
+# Diferença em dias
+dias_vivo = (hoje - data_nascimento).days
+
+print(f"Você está vivo há {dias_vivo} dias.")
